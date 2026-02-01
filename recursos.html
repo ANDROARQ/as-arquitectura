@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Recursos | Alejandro Salazar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&family=Allura&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  background:#000;
+  color:#eee;
+  font-family:'Inter', sans-serif;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 40px;
+}
+
+.top-link{
+  margin-bottom:30px;
+}
+
+.top-link a{
+  color:#aaa;
+  text-decoration:none;
+  font-size:14px;
+  border-bottom:1px solid #555;
+}
+
+.top-link a:hover{
+  color:#fff;
+  border-color:#fff;
+}
+
+h1,h2{
+  font-family:'Playfair Display', serif;
+  color:#fff;
+}
+
+h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+h2{
+  font-size:28px;
+  margin:30px 0 15px;
+}
+
+p{
+  max-width:720px;
+  line-height:1.6;
+  color:#ccc;
+  margin-bottom:30px;
+}
+
+/* GRID */
+.scenes-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+/* MOSAICO */
+.mosaic{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:20px;
+}
+
+/* CARD */
+.scene-card{
+  position:relative;
+  aspect-ratio:5 / 3;
+  overflow:hidden;
+}
+
+.scene-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s ease;
+}
+
+.scene-card:hover img{
+  transform:scale(1.05);
+}
+
+/* OVERLAY */
+.scene-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.1));
+  display:flex;
+  align-items:flex-end;
+  padding:18px;
+}
+
+.scene-title{
+  font-family:'Allura', cursive;
+  font-size:36px;
+  color:#fff;
+}
+
+/* INFO */
+.scene-info{
+  margin-top:8px;
+  font-size:14px;
+  color:#aaa;
+}
+
+/* SECCIONES INFERIORES */
+.resources-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  margin-top:80px;
+}
+
+.resource-box{
+  border-top:1px solid #333;
+  padding-top:30px;
+}
+
+.resource-box p{
+  color:#aaa;
+}
+
+/* SKETCHUP + PLUGINS */
+.sketchup-wrapper{
+  margin-top:80px;
+  border-top:1px solid #333;
+  padding-top:40px;
+}
+
+.sketchup-grid{
+  display:flex;
+  gap:60px;
+  align-items:flex-start;
+}
+
+.sketchup-carousel,
+.plugin-card{
+  width:260px;
+  aspect-ratio:4 / 5;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.sketchup-carousel img,
+.plugin-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.plugin-card{
+  position:relative;
+}
+
+.plugin-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.2));
+  display:flex;
+  align-items:flex-end;
+  padding:18px;
+}
+
+.plugin-title{
+  font-family:'Playfair Display', serif;
+  font-size:18px;
+  color:#fff;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .scenes-grid,
+  .resources-grid{
+    grid-template-columns:1fr;
+  }
+
+  .sketchup-grid{
+    flex-direction:column;
+  }
+
+  h1{
+    font-size:38px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="top-link">
+  <a href="index.html">← Volver a la página principal</a>
+</div>
+
+<h1>Recursos</h1>
+
+<p>
+Herramientas, archivos base y material de apoyo que utilizo en procesos reales
+de diseño arquitectónico, representación y desarrollo de proyectos.
+Recursos pensados para aprender haciendo.
+</p>
+
+<h2>Escenas</h2>
+
+<div class="scenes-grid">
+
+<div>
+  <h2>Escenas gratuitas</h2>
+  <div class="mosaic">
+
+    <!-- ESCENA PRACTICA (TIKTOK) -->
+    <a class="scene-card"
+       href="https://vt.tiktok.com/ZSabAcuVx/"
+       target="_blank" rel="noopener noreferrer">
+      <img src="proyectos/RECURSOS ESCENAS/Recurso.png">
+      <div class="scene-overlay">
+        <div class="scene-title">Escena práctica (TT)</div>
+      </div>
+    </a>
+
+    <!-- ESCENAS D5 GRATUITAS (PATREON) -->
+    <a class="scene-card"
+       href="https://www.patreon.com/posts/escenas-para-d5-148561691"
+       target="_blank" rel="noopener noreferrer">
+      <img src="proyectos/RECURSOS ESCENAS/ESCENAS GRATUITAS/PORTADA.png">
+      <div class="scene-overlay">
+        <div class="scene-title">Escenas D5 gratuitas</div>
+      </div>
+    </a>
+
+  </div>
+  <div class="scene-info">Render base + escenas gratuitas · Acceso libre</div>
+</div>
+
+<div>
+  <h2>Escenas de pago</h2>
+  <div class="mosaic">
+
+    <!-- DORMITORIO MODERNO -->
+    <a class="scene-card"
+       href="https://www.patreon.com/posts/escena-moderno-148255217"
+       target="_blank" rel="noopener noreferrer">
+      <img src="proyectos/REDISEÑO DE ESPACIOS INTERIORES/DORMITORIO 1.png">
+      <div class="scene-overlay">
+        <div class="scene-title">Dormitorio moderno</div>
+      </div>
+    </a>
+
+    <!-- SALA MODERNA -->
+    <a class="scene-card"
+       href="https://www.patreon.com/posts/sala-moderna-148259524"
+       target="_blank" rel="noopener noreferrer">
+      <img src="proyectos/REDISEÑO DE ESPACIOS INTERIORES/SALA MODERNA.png">
+      <div class="scene-overlay">
+        <div class="scene-title">Sala moderna</div>
+      </div>
+    </a>
+
+  </div>
+  <div class="scene-info">Render + escena completa · Acceso de pago</div>
+</div>
+
+</div>
+
+<!-- SKETCHUP -->
+<div class="sketchup-wrapper">
+  <h2>SketchUp</h2>
+  <p>Atajos, guías visuales y recursos prácticos para modelar con mayor rapidez y control.</p>
+
+  <div class="sketchup-grid">
+
+    <!-- ATAJOS (TIKTOK) -->
+    <a class="sketchup-carousel"
+       href="https://vt.tiktok.com/ZSabAcuVx/"
+       target="_blank" rel="noopener noreferrer">
+      <img src="proyectos/RECURSOS ESCENAS/SKETCHUP/ATAJOS 1.png">
+    </a>
+
+    <!-- PLUGINS -->
+    <a class="plugin-card"
+       href="https://drive.google.com/drive/folders/1V4S_C8nAQc5II8XOt3BrdzW1KfZwWWZW?usp=sharing"
+       target="_blank">
+      <img src="proyectos/RECURSOS ESCENAS/SKETCHUP/5 PLUGINS/PLUGINS.png">
+      <div class="plugin-overlay">
+        <div class="plugin-title">5 Plugins gratuitos</div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<div class="resources-grid">
+  <div class="resource-box">
+    <h2>Mobiliario</h2>
+    <p><em>Disponible próximamente.</em></p>
+  </div>
+
+  <div class="resource-box">
+    <h2>Texturas</h2>
+    <p><em>Disponible próximamente.</em></p>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
