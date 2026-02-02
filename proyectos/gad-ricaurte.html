@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Edificio del GAD Parroquial de Ricaurte | Alejandro Salazar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FUENTES -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Inter', sans-serif;
+  color:#111;
+  background:#fff;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 40px;
+}
+
+/* ===== CUADRO PROYECTO ===== */
+.project-box{
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+  margin-bottom:60px;
+}
+
+.project-letter{
+  font-family:'Playfair Display', serif;
+  font-size:48px;
+  color:#9a9a9a;
+  line-height:1;
+}
+
+.project-info p{
+  margin:2px 0;
+  font-size:14px;
+  line-height:1.35;
+}
+
+/* ===== TITULOS ===== */
+h1,h2{
+  font-family:'Playfair Display', serif;
+}
+
+h1{
+  font-size:52px;
+  margin-bottom:40px;
+}
+
+h2{
+  font-size:34px;
+  margin:120px 0 40px;
+}
+
+/* ===== TEXTO ===== */
+p{
+  line-height:1.55;
+  text-align:justify;
+  margin-bottom:22px;
+}
+
+/* ===== INTRO ===== */
+.intro{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:60px;
+  align-items:start;
+}
+
+.intro img{
+  width:100%;
+  cursor:pointer;
+}
+
+/* ===== RENDERS ===== */
+.renders{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:80px;
+}
+
+.renders img{
+  width:100%;
+  cursor:pointer;
+}
+
+/* ===== ZONIFICACIÓN ===== */
+.zonificacion{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+  margin-top:60px;
+}
+
+.zonificacion img{
+  width:85%;
+  justify-self:end;
+  cursor:pointer;
+}
+
+/* ===== SISTEMA CONSTRUCTIVO ===== */
+.sistema-texto{
+  max-width:700px;
+}
+
+.sistema-imgs{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:40px;
+}
+
+.sistema-imgs img{
+  width:100%;
+  cursor:pointer;
+}
+
+/* ===== PLANOS ===== */
+.planos{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:60px;
+  margin-top:60px;
+}
+
+.planos a{
+  text-decoration:none;
+  color:#111;
+  border-bottom:1px solid #111;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  text-align:center;
+  margin:140px 0 80px;
+}
+
+.footer p{
+  text-align:center;
+}
+
+.footer a{
+  color:#111;
+  text-decoration:none;
+  border-bottom:1px solid #111;
+}
+
+/* ===== ANIMACIONES ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.9s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.93);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:90%;
+}
+
+.lightbox span{
+  position:absolute;
+  top:30px;
+  right:40px;
+  font-size:32px;
+  color:white;
+  cursor:pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .intro,
+  .renders,
+  .zonificacion,
+  .sistema-imgs,
+  .planos{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    font-size:40px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ===== CUADRO DE PROYECTO (AGREGADO) ===== -->
+<div class="project-box reveal">
+  <div class="project-letter">A</div>
+  <div class="project-info">
+    <p><strong>Proyecto:</strong> Edificio del GAD Parroquial de Ricaurte</p>
+    <p><strong>Tipo:</strong> Anteproyecto arquitectónico institucional</p>
+    <p><strong>Autor:</strong> Arq. Alejandro Salazar</p>
+  </div>
+</div>
+
+<h1 class="reveal">Edificio del GAD Parroquial de Ricaurte</h1>
+
+<section class="intro">
+  <div class="reveal">
+    <p>
+      El proyecto corresponde al anteproyecto arquitectónico del Edificio del
+      Gobierno Autónomo Descentralizado Parroquial de Ricaurte, concebido como
+      un equipamiento público que articula funciones administrativas, atención
+      ciudadana y espacios de encuentro comunitario.
+    </p>
+
+    <p>
+      La propuesta se desarrolla a partir del análisis del contexto rural, la
+      escala barrial y las dinámicas sociales propias de la parroquia,
+      planteando una arquitectura clara, legible y abierta, que refuerza la
+      transparencia institucional y la relación directa con el espacio público.
+    </p>
+
+    <p>
+      El edificio se implanta en Ricaurte, cantón Cuenca, integrándose al tejido
+      existente mediante una volumetría controlada y el uso de estrategias
+      pasivas de confort ambiental, priorizando ventilación cruzada, control
+      solar y eficiencia espacial.
+    </p>
+
+    <p>
+      El sistema constructivo se resuelve mediante una estructura mixta, con
+      predominio de madera laminada como elemento estructural principal,
+      optimizando el comportamiento térmico, la racionalización constructiva y
+      el uso de materiales acordes al contexto.
+    </p>
+  </div>
+
+  <img src="R1 C EDI.png" class="reveal" alt="Render principal GAD Ricaurte">
+</section>
+
+<section class="renders">
+  <img src="R2 COLLAGE.jpg" class="reveal" alt="Render exterior">
+  <img src="RENDER COLLAGE 4.jpg" class="reveal" alt="Render interior">
+</section>
+
+<h2 class="reveal">Zonificación arquitectónica</h2>
+
+<section class="zonificacion">
+  <div class="reveal">
+    <p>
+      La zonificación del edificio responde a criterios funcionales y de
+      accesibilidad, organizando las áreas administrativas, técnicas y de
+      atención ciudadana en torno a circulaciones claras y espacios intermedios
+      que favorecen la orientación, el control visual y la relación con el
+      entorno inmediato.
+    </p>
+
+    <p>
+      La disposición espacial permite una lectura directa del edificio desde el
+      espacio público, reforzando el carácter institucional y promoviendo una
+      arquitectura abierta, flexible y adaptable a futuras necesidades de
+      crecimiento.
+    </p>
+  </div>
+
+  <img src="diagrama de zonificacion.jpg" class="reveal" alt="Diagrama de zonificación">
+</section>
+
+<h2 class="reveal">Sistema constructivo</h2>
+
+<div class="sistema-texto reveal">
+  <p>
+    El sistema estructural se basa en el uso de madera laminada como material
+    principal, mediante un esquema de viga pasante apoyada y abrazada por
+    columnas dobles de sección compuesta. Este sistema permite una lectura
+    clara del comportamiento estructural, optimiza luces y facilita el montaje
+    constructivo.
+  </p>
+
+  <p>
+    Las uniones se resuelven mediante placas metálicas y pernos visibles,
+    enfatizando la expresión tectónica del sistema y garantizando un adecuado
+    desempeño estructural. La losa CLT complementa el sistema, aportando
+    rigidez, estabilidad y eficiencia constructiva.
+  </p>
+</div>
+
+<div class="sistema-imgs">
+  <img src="DETALLE CONS 1.jpg" class="reveal">
+  <img src="DETALLE CONS2.jpg" class="reveal">
+</div>
+
+<h2 class="reveal">Planos arquitectónicos</h2>
+
+<div class="planos reveal">
+  <div>
+    <p><strong>Plantas arquitectónicas</strong></p>
+    <a href="PLANTAS FINALES_AS.pdf" target="_blank">Ver plano (PDF)</a>
+  </div>
+
+  <div>
+    <p><strong>Cortes y elevaciones</strong></p>
+    <a href="4.pdf" target="_blank">Ver plano (PDF)</a><br>
+    <a href="5.pdf" target="_blank">Ver plano (PDF)</a><br>
+    <a href="6.pdf" target="_blank">Ver plano (PDF)</a><br>
+    <a href="7.pdf" target="_blank">Ver plano (PDF)</a>
+  </div>
+
+  <div>
+    <p><strong>Detalles constructivos</strong></p>
+    <a href="DETALLE CONS 1.jpg" target="_blank">Ver detalle</a><br>
+    <a href="DETALLE CONS2.jpg" target="_blank">Ver detalle</a>
+  </div>
+</div>
+
+<div style="margin-top:100px; text-align:center;">
+  <a href="https://www.behance.net/" target="_blank"
+     style="border:1px solid #111; padding:12px 28px; text-decoration:none; color:#111;">
+    Ver proyecto en Behance
+  </a>
+</div>
+
+<div class="footer">
+  <p style="font-family:'Playfair Display',serif; font-size:22px;">
+    “La arquitectura no impone al lugar, aprende de él.”
+  </p>
+
+  <p>
+    <strong>Contacto</strong><br>
+    Correo: alejandrosalazarz@icloud.com<br>
+    Teléfono: 0984527298
+  </p>
+
+  <p>
+    Arq. Alejandro Salazar<br>
+    Cuenca – Ecuador
+  </p>
+
+  <a href="../index.html">← Volver a la página principal</a>
+</div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span onclick="closeLightbox()">✕</span>
+  <img id="lightbox-img">
+</div>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+const revealOnScroll = () => {
+  const trigger = window.innerHeight * 0.85;
+  reveals.forEach(el => {
+    if(el.getBoundingClientRect().top < trigger){
+      el.classList.add('active');
+    }
+  });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+const imgs = document.querySelectorAll('img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+imgs.forEach(img=>{
+  img.addEventListener('click',()=>{
+    if(img.src.includes('.jpg') || img.src.includes('.png')){
+      lightbox.style.display='flex';
+      lightboxImg.src=img.src;
+    }
+  });
+});
+
+function closeLightbox(){
+  lightbox.style.display='none';
+}
+</script>
+
+</body>
+</html>
