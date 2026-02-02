@@ -1,123 +1,336 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>ANDRO ARQ.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      margin: 0;
-      padding: 60px;
-      background: #ffffff;
-      color: #000;
-    }
+<meta charset="UTF-8">
+<title>Alejandro Salazar | Arquitectura</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
+<!-- FUENTES -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-    p {
-      max-width: 700px;
-      line-height: 1.6;
-    }
+<style>
+body{
+  margin:0;
+  font-family:'Inter', sans-serif;
+  color:#111;
+  background:#fff;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 40px;
-      margin-top: 60px;
-    }
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 40px;
+}
 
-    h3 {
-      margin-bottom: 10px;
-    }
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:120px;
+}
 
-    a {
-      color: #000;
-      text-decoration: none;
-      border-bottom: 1px solid #000;
-    }
+header a{
+  margin-left:30px;
+  text-decoration:none;
+  color:#111;
+  border-bottom:1px solid #111;
+  cursor:pointer;
+}
 
-    a:hover {
-      opacity: 0.6;
-    }
-  </style>
+h1,h2,h3{
+  font-family:'Playfair Display', serif;
+}
+
+h1{
+  font-size:52px;
+  margin-bottom:20px;
+}
+
+.intro{
+  max-width:720px;
+  margin-bottom:140px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:80px;
+}
+
+h3{
+  font-size:20px;
+  margin-bottom:24px;
+}
+
+p{
+  line-height:1.55;
+  margin-bottom:16px;
+}
+
+a{
+  color:#111;
+  text-decoration:none;
+  border-bottom:1px solid #111;
+}
+
+.dots{
+  letter-spacing:4px;
+}
+
+/* ============================= */
+/* RENDERS + RECURSOS COMPACTOS */
+/* ============================= */
+
+.recursos{
+  grid-column: 2 / 3;
+  margin-top: -300px; /* ACERCA RECURSOS A RENDERS */
+}
+
+.recursos h3{
+  margin-top: 10px;
+}
+
+/* ===== MODAL ===== */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+
+.modal-content{
+  background:#fff;
+  padding:40px;
+  max-width:420px;
+  width:100%;
+}
+
+.modal-content input,
+.modal-content textarea{
+  width:100%;
+  margin-bottom:15px;
+  padding:10px;
+  font-family:'Inter', sans-serif;
+}
+
+/* ===== CONTADOR ===== */
+.visit-counter{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  font-size:12px;
+  color:#555;
+  background:#fff;
+  padding:8px 12px;
+  border:1px solid #ddd;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
+    gap:60px;
+  }
+
+  .recursos{
+    grid-column:auto;
+    margin-top:0;
+  }
+
+  h1{
+    font-size:40px;
+  }
+
+  header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <h1>ANDRO ARQ.</h1>
+<div class="container">
 
+<header>
+  <strong>ALEJANDRO SALAZAR</strong>
+  <nav>
+    <a href="#contacto">Contacto</a>
+    <a onclick="abrirConsulta()">Consultas</a>
+  </nav>
+</header>
+
+<section class="intro">
+  <h1>ANDRO ARQ.</h1>
   <p>
     Hola, soy Alejandro Salazar. Arquitecto con interés en el diseño consciente,
-    la representación arquitectónica y el aprendizaje continuo. Aquí comparto
-    proyectos, procesos, cursos y recursos pensados para crecer juntos.
+    la representación arquitectónica y el aprendizaje continuo.
+    Aquí comparto proyectos, procesos, cursos y recursos pensados para crecer juntos.
   </p>
+</section>
 
-  <div class="grid">
+<section class="grid">
 
-    <!-- Herramientas -->
-    <div>
-      <h3>Herramientas y experiencia</h3>
-      <p>AutoCAD ●●●●●</p>
-      <p>Archicad ●●●●○</p>
-      <p>SketchUp ●●●●○</p>
-      <p>3ds Max ●●●○○</p>
-      <p>Revit ●●●○○</p>
-      <p>Lumion ●●●●○</p>
-      <p>D5 Render ●●●●○</p>
-      <p>Photoshop ●●●●○</p>
-      <p>Illustrator ●●●○○</p>
-      <p>InDesign ●●●○○</p>
-    </div>
-
-    <!-- Renders -->
-    <div>
-      <h3>Renders</h3>
-      <p>
-        Visualización arquitectónica de espacios interiores y exteriores,
-        con enfoque en atmósfera, materialidad y narrativa espacial.
-      </p>
-      <a href="renders.html">Ver renders →</a>
-    </div>
-
-    <!-- Cursos -->
-    <div>
-      <h3>Cursos</h3>
-      <p>
-        Cursos breves y prácticos orientados a arquitectura,
-        representación, renders y procesos de diseño.
-      </p>
-      <a href="cursos.html">Ver cursos →</a>
-    </div>
-
-    <!-- Proyectos -->
-    <div>
-      <h3>Proyectos</h3>
-
-      <p>
-        <strong>Escuela Rural en Senegal</strong><br>
-        Arquitectura educativa basada en adobe y estrategias pasivas.
-      </p>
-
-      <p>
-        <strong>Edificio GAD Parroquial de Ricaurte</strong><br>
-        Anteproyecto con estructura de madera laminada.
-      </p>
-
-      <p>
-        <a href="proyectos/rediseño-espacios-interiores/">
-          Rediseño de espacios interiores
-        </a><br>
-        Intervenciones interiores enfocadas en funcionalidad,
-        materialidad y experiencia espacial.
-      </p>
-
-    </div>
-
+  <!-- HERRAMIENTAS -->
+  <div>
+    <h3>Herramientas y experiencia</h3>
+    <p>AutoCAD <span class="dots">●●●●●</span></p>
+    <p>Archicad <span class="dots">●●●●○</span></p>
+    <p>SketchUp <span class="dots">●●●●○</span></p>
+    <p>3ds Max <span class="dots">●●○○○</span></p>
+    <p>Revit <span class="dots">●●○○○</span></p>
+    <p>Lumion <span class="dots">●●●●●</span></p>
+    <p>D5 Render <span class="dots">●●●●○</span></p>
+    <p>Photoshop <span class="dots">●●●●○</span></p>
+    <p>Illustrator <span class="dots">●●●○○</span></p>
+    <p>InDesign <span class="dots">●●●○○</span></p>
   </div>
+
+  <!-- RENDERS -->
+  <div>
+    <h3>Renders</h3>
+    <p>
+      Visualización arquitectónica de espacios interiores y exteriores,
+      con enfoque en atmósfera, materialidad y narrativa espacial.
+    </p>
+    <a href="renders.html">Ver renders →</a>
+  </div>
+
+  <!-- CURSOS -->
+  <div>
+    <h3>Cursos</h3>
+    <p>
+      Cursos breves y prácticos orientados a arquitectura, representación,
+      renders y procesos de diseño.
+    </p>
+    <a href="cursos.html">Ver cursos →</a>
+  </div>
+
+  <!-- PROYECTOS -->
+  <div>
+    <h3>Proyectos</h3>
+
+    <p>
+      <a href="proyectos/img/escuela-senegal.html">
+        <strong>Escuela Rural en Senegal</strong>
+      </a><br>
+      Arquitectura educativa basada en adobe y estrategias pasivas.
+    </p>
+
+    <p>
+      <a href="proyectos/gad-ricaurte.html">
+        <strong>Edificio GAD Parroquial de Ricaurte</strong>
+      </a><br>
+      Anteproyecto con estructura de madera laminada.
+    </p>
+
+    <p>
+     <a href="proyectos/rediseño-espacios-interiores/rediseño-espacios-interiores.html">
+  <div class="scene-card">
+    <img src="proyectos/rediseño-espacios-interiores/dormitorio-1.png" alt="Rediseño de interiores">
+    <div class="scene-overlay">
+      <div class="scene-title">Rediseño de espacios interiores</div>
+      <div class="scene-info">Proyecto completo</div>
+    </div>
+  </div>
+</a>
+
+      Intervenciones interiores enfocadas en funcionalidad,
+      materialidad y experiencia espacial.
+    </p>
+  </div>
+
+  <!-- RECURSOS (PEGADO A RENDERS) -->
+  <div class="recursos">
+    <h3>Recursos</h3>
+    <p>
+      Materiales seleccionados para apoyar el proceso de diseño.
+    </p>
+    <a href="recursos.html">Ver recursos →</a>
+  </div>
+
+</section>
+
+<section id="contacto" style="margin-top:190px;">
+  <h2>Contacto</h2>
+  <p>📩 alejandrosalazarz@icloud.com</p>
+  <p>📞 +593 984 527 298</p>
+  <p>📍 Cuenca – Ecuador</p>
+</section>
+
+</div>
+
+<!-- CONTADOR -->
+<div class="visit-counter">
+  Visitas desde el lanzamiento: <span id="contadorVisitas">0</span>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modalConsulta">
+  <div class="modal-content">
+    <h3>Consulta</h3>
+
+    <form 
+      name="consultas"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      onsubmit="enviarConsulta(event)"
+    >
+      <input type="hidden" name="form-name" value="consultas">
+      <input type="hidden" name="bot-field">
+
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="email" name="correo" placeholder="Correo" required>
+      <textarea name="mensaje" rows="4" placeholder="Escribe tu consulta" required></textarea>
+
+      <button type="submit">Enviar consulta</button>
+
+      <p id="mensajeExito" style="display:none; margin-top:15px;">
+        Consulta enviada. Gracias.
+      </p>
+    </form>
+
+    <a onclick="cerrarConsulta()">Cerrar</a>
+  </div>
+</div>
+
+<script>
+function abrirConsulta(){
+  document.getElementById('modalConsulta').style.display='flex';
+}
+
+function cerrarConsulta(){
+  document.getElementById('modalConsulta').style.display='none';
+}
+
+function enviarConsulta(e){
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  fetch("/", { method:"POST", body:data })
+  .then(()=>{
+    document.getElementById("mensajeExito").style.display="block";
+    form.reset();
+    setTimeout(()=>{
+      cerrarConsulta();
+      document.getElementById("mensajeExito").style.display="none";
+    },2000);
+  });
+}
+
+/* CONTADOR */
+let visitas = localStorage.getItem("contadorVisitas");
+visitas = visitas ? parseInt(visitas) + 1 : 1;
+localStorage.setItem("contadorVisitas", visitas);
+document.getElementById("contadorVisitas").textContent = visitas;
+</script>
 
 </body>
 </html>
