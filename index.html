@@ -4,141 +4,116 @@
   <meta charset="UTF-8">
   <title>ANDRO ARQ.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
   <style>
-    body{
-      margin:0;
-      background:#fff;
-      color:#111;
-      font-family:'Inter',sans-serif;
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      margin: 0;
+      padding: 60px;
+      background: #ffffff;
+      color: #000;
     }
-    .container{
-      max-width:1100px;
-      margin:auto;
-      padding:100px 40px;
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
     }
-    h1{
-      font-family:'Playfair Display',serif;
-      font-size:52px;
-      margin-bottom:10px;
+
+    p {
+      max-width: 700px;
+      line-height: 1.6;
     }
-    p{
-      max-width:520px;
-      line-height:1.6;
-      color:#444;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      margin-top: 60px;
     }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:60px;
-      margin-top:80px;
+
+    h3 {
+      margin-bottom: 10px;
     }
-    h3{
-      font-family:'Playfair Display',serif;
-      font-size:20px;
-      margin-bottom:20px;
+
+    a {
+      color: #000;
+      text-decoration: none;
+      border-bottom: 1px solid #000;
     }
-    ul{
-      list-style:none;
-      padding:0;
-      margin:0;
-    }
-    li{
-      margin-bottom:10px;
-      font-size:14px;
-    }
-    a{
-      color:#111;
-      text-decoration:none;
-      border-bottom:1px solid #111;
-      padding-bottom:2px;
-    }
-    a:hover{
-      opacity:.6;
+
+    a:hover {
+      opacity: 0.6;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <h1>ANDRO ARQ.</h1>
 
-    <h1>ANDRO ARQ.</h1>
-    <p>
-      Hola, soy Alejandro Salazar. Arquitecto con interés en el diseño consciente,
-      la representación arquitectónica y el aprendizaje continuo.
-      Aquí comparto proyectos, procesos, cursos y recursos pensados para crecer juntos.
-    </p>
+  <p>
+    Hola, soy Alejandro Salazar. Arquitecto con interés en el diseño consciente,
+    la representación arquitectónica y el aprendizaje continuo. Aquí comparto
+    proyectos, procesos, cursos y recursos pensados para crecer juntos.
+  </p>
 
-    <div class="grid">
+  <div class="grid">
 
-      <!-- Herramientas -->
-      <div>
-        <h3>Herramientas y experiencia</h3>
-        <ul>
-          <li>AutoCAD ●●●●●</li>
-          <li>Archicad ●●●●○</li>
-          <li>SketchUp ●●●●●</li>
-          <li>3ds Max ●●●○○</li>
-          <li>Revit ●●●○○</li>
-          <li>Lumion ●●●●●</li>
-          <li>D5 Render ●●●●●</li>
-          <li>Photoshop ●●●●●</li>
-          <li>Illustrator ●●●●○</li>
-          <li>InDesign ●●●●○</li>
-        </ul>
-      </div>
+    <!-- Herramientas -->
+    <div>
+      <h3>Herramientas y experiencia</h3>
+      <p>AutoCAD ●●●●●</p>
+      <p>Archicad ●●●●○</p>
+      <p>SketchUp ●●●●○</p>
+      <p>3ds Max ●●●○○</p>
+      <p>Revit ●●●○○</p>
+      <p>Lumion ●●●●○</p>
+      <p>D5 Render ●●●●○</p>
+      <p>Photoshop ●●●●○</p>
+      <p>Illustrator ●●●○○</p>
+      <p>InDesign ●●●○○</p>
+    </div>
 
-      <!-- Renders / Recursos -->
-      <div>
-        <h3>Renders</h3>
-        <p>
-          Visualización arquitectónica de espacios interiores y exteriores,
-          con enfoque en atmósfera, materialidad y narrativa espacial.
-        </p>
-        <a href="renders.html">Ver renders →</a>
+    <!-- Renders -->
+    <div>
+      <h3>Renders</h3>
+      <p>
+        Visualización arquitectónica de espacios interiores y exteriores,
+        con enfoque en atmósfera, materialidad y narrativa espacial.
+      </p>
+      <a href="renders.html">Ver renders →</a>
+    </div>
 
-        <h3 style="margin-top:40px;">Recursos</h3>
-        <p>
-          Materiales seleccionados para apoyar el proceso de diseño.
-        </p>
-        <a href="recursos.html">Ver recursos →</a>
-      </div>
+    <!-- Cursos -->
+    <div>
+      <h3>Cursos</h3>
+      <p>
+        Cursos breves y prácticos orientados a arquitectura,
+        representación, renders y procesos de diseño.
+      </p>
+      <a href="cursos.html">Ver cursos →</a>
+    </div>
 
-      <!-- Cursos -->
-      <div>
-        <h3>Cursos</h3>
-        <p>
-          Cursos breves y prácticos orientados a arquitectura,
-          representación, renders y procesos de diseño.
-        </p>
-        <a href="cursos.html">Ver cursos →</a>
-      </div>
+    <!-- Proyectos -->
+    <div>
+      <h3>Proyectos</h3>
 
-      <!-- Proyectos -->
-      <div>
-        <h3>Proyectos</h3>
+      <p>
+        <strong>Escuela Rural en Senegal</strong><br>
+        Arquitectura educativa basada en adobe y estrategias pasivas.
+      </p>
 
-        <p>
-          <strong>Escuela Rural en Senegal</strong><br>
-          Arquitectura educativa basada en adobe y estrategias pasivas.
-        </p>
+      <p>
+        <strong>Edificio GAD Parroquial de Ricaurte</strong><br>
+        Anteproyecto con estructura de madera laminada.
+      </p>
 
-        <p>
-          <strong>Edificio GAD Parroquial de Ricaurte</strong><br>
-          Anteproyecto con estructura de madera laminada.
-        </p>
-
-        <p>
-          <a href="proyectos/rediseño-espacios-interiores/">
-  Rediseño de espacios interiores
-</a><br>
-          Intervenciones interiores enfocadas en funcionalidad,
-          materialidad y experiencia espacial.
-        </p>
-      </div>
+      <p>
+        <a href="proyectos/rediseño-espacios-interiores/">
+          Rediseño de espacios interiores
+        </a><br>
+        Intervenciones interiores enfocadas en funcionalidad,
+        materialidad y experiencia espacial.
+      </p>
 
     </div>
 
@@ -146,4 +121,3 @@
 
 </body>
 </html>
-
