@@ -77,20 +77,11 @@ a{
   letter-spacing:4px;
 }
 
-/* ============================= */
-/* RENDERS + RECURSOS COMPACTOS */
-/* ============================= */
-
 .recursos{
   grid-column: 2 / 3;
-  margin-top: -300px; /* ACERCA RECURSOS A RENDERS */
+  margin-top: -300px;
 }
 
-.recursos h3{
-  margin-top: 10px;
-}
-
-/* ===== MODAL ===== */
 .modal{
   display:none;
   position:fixed;
@@ -108,15 +99,6 @@ a{
   width:100%;
 }
 
-.modal-content input,
-.modal-content textarea{
-  width:100%;
-  margin-bottom:15px;
-  padding:10px;
-  font-family:'Inter', sans-serif;
-}
-
-/* ===== CONTADOR ===== */
 .visit-counter{
   position:fixed;
   bottom:20px;
@@ -128,7 +110,39 @@ a{
   border:1px solid #ddd;
 }
 
-/* ===== RESPONSIVE ===== */
+.scene-card{
+  position:relative;
+  aspect-ratio:5/3;
+  overflow:hidden;
+}
+
+.scene-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.scene-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.2));
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:18px;
+  color:#fff;
+}
+
+.scene-title{
+  font-family:'Playfair Display', serif;
+  font-size:22px;
+}
+
+.scene-info{
+  font-size:13px;
+  opacity:.8;
+}
+
 @media(max-width:900px){
   .grid{
     grid-template-columns:1fr;
@@ -176,7 +190,6 @@ a{
 
 <section class="grid">
 
-  <!-- HERRAMIENTAS -->
   <div>
     <h3>Herramientas y experiencia</h3>
     <p>AutoCAD <span class="dots">●●●●●</span></p>
@@ -191,7 +204,6 @@ a{
     <p>InDesign <span class="dots">●●●○○</span></p>
   </div>
 
-  <!-- RENDERS -->
   <div>
     <h3>Renders</h3>
     <p>
@@ -201,7 +213,6 @@ a{
     <a href="renders.html">Ver renders →</a>
   </div>
 
-  <!-- CURSOS -->
   <div>
     <h3>Cursos</h3>
     <p>
@@ -211,7 +222,6 @@ a{
     <a href="cursos.html">Ver cursos →</a>
   </div>
 
-  <!-- PROYECTOS -->
   <div>
     <h3>Proyectos</h3>
 
@@ -230,22 +240,20 @@ a{
     </p>
 
     <p>
-     <<a href="proyectos/rediseño-espacios-interiores/">
-  <div class="scene-card">
-    <img src="proyectos/rediseño-espacios-interiores/dormitorio-1.png" alt="Rediseño de interiores">
-    <div class="scene-overlay">
-      <div class="scene-title">Rediseño de espacios interiores</div>
-      <div class="scene-info">Proyecto completo</div>
-    </div>
-  </div>
-</a>
-
+      <a href="proyectos/rediseño-espacios-interiores/">
+        <div class="scene-card">
+          <img src="proyectos/rediseño-espacios-interiores/dormitorio-1.png" alt="Rediseño de interiores">
+          <div class="scene-overlay">
+            <div class="scene-title">Rediseño de espacios interiores</div>
+            <div class="scene-info">Proyecto completo</div>
+          </div>
+        </div>
+      </a>
       Intervenciones interiores enfocadas en funcionalidad,
       materialidad y experiencia espacial.
     </p>
   </div>
 
-  <!-- RECURSOS (PEGADO A RENDERS) -->
   <div class="recursos">
     <h3>Recursos</h3>
     <p>
@@ -265,39 +273,8 @@ a{
 
 </div>
 
-<!-- CONTADOR -->
 <div class="visit-counter">
   Visitas desde el lanzamiento: <span id="contadorVisitas">0</span>
-</div>
-
-<!-- MODAL -->
-<div class="modal" id="modalConsulta">
-  <div class="modal-content">
-    <h3>Consulta</h3>
-
-    <form 
-      name="consultas"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      onsubmit="enviarConsulta(event)"
-    >
-      <input type="hidden" name="form-name" value="consultas">
-      <input type="hidden" name="bot-field">
-
-      <input type="text" name="nombre" placeholder="Nombre" required>
-      <input type="email" name="correo" placeholder="Correo" required>
-      <textarea name="mensaje" rows="4" placeholder="Escribe tu consulta" required></textarea>
-
-      <button type="submit">Enviar consulta</button>
-
-      <p id="mensajeExito" style="display:none; margin-top:15px;">
-        Consulta enviada. Gracias.
-      </p>
-    </form>
-
-    <a onclick="cerrarConsulta()">Cerrar</a>
-  </div>
 </div>
 
 <script>
@@ -309,23 +286,6 @@ function cerrarConsulta(){
   document.getElementById('modalConsulta').style.display='none';
 }
 
-function enviarConsulta(e){
-  e.preventDefault();
-  const form = e.target;
-  const data = new FormData(form);
-
-  fetch("/", { method:"POST", body:data })
-  .then(()=>{
-    document.getElementById("mensajeExito").style.display="block";
-    form.reset();
-    setTimeout(()=>{
-      cerrarConsulta();
-      document.getElementById("mensajeExito").style.display="none";
-    },2000);
-  });
-}
-
-/* CONTADOR */
 let visitas = localStorage.getItem("contadorVisitas");
 visitas = visitas ? parseInt(visitas) + 1 : 1;
 localStorage.setItem("contadorVisitas", visitas);
