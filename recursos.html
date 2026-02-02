@@ -2,148 +2,52 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Recursos | Alejandro Salazar</title>
+<title>Recursos | ANDRO ARQ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&family=Allura&display=swap" rel="stylesheet">
 
 <style>
-body{
-  margin:0;
-  background:#000;
-  color:#eee;
-  font-family:'Inter', sans-serif;
-}
+body{margin:0;background:#000;color:#eee;font-family:'Inter',sans-serif}
+.container{max-width:1200px;margin:auto;padding:60px 40px}
+a{color:inherit;text-decoration:none}
+h1,h2{font-family:'Playfair Display',serif;color:#fff}
+h1{font-size:48px}
+h2{font-size:28px;margin-top:50px}
+p{color:#ccc;max-width:720px}
 
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:60px 40px;
-}
+.scenes-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 
-.top-link a{
-  color:#aaa;
-  text-decoration:none;
-  font-size:14px;
-  border-bottom:1px solid #555;
-}
-
-.top-link a:hover{
-  color:#fff;
-}
-
-h1,h2{
-  font-family:'Playfair Display', serif;
-  color:#fff;
-}
-
-h1{
-  font-size:48px;
-  margin-bottom:20px;
-}
-
-h2{
-  font-size:28px;
-  margin:40px 0 15px;
-}
-
-p{
-  max-width:720px;
-  line-height:1.6;
-  color:#ccc;
-}
-
-.scenes-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-}
-
-.mosaic{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-.scene-card{
-  position:relative;
-  aspect-ratio:5 / 3;
-  overflow:hidden;
-}
-
-.scene-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+.scene-card{position:relative;aspect-ratio:5/3;overflow:hidden}
+.scene-card img{width:100%;height:100%;object-fit:cover}
 
 .scene-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.2));
-  display:flex;
-  align-items:flex-end;
-  padding:18px;
-}
+position:absolute;inset:0;
+background:linear-gradient(to top,rgba(0,0,0,.75),rgba(0,0,0,.2));
+display:flex;align-items:flex-end;padding:18px}
 
-.scene-title{
-  font-family:'Allura', cursive;
-  font-size:34px;
-  color:#fff;
-}
+.scene-title{font-family:'Allura',cursive;font-size:34px;color:#fff}
+.scene-info{margin-top:10px;color:#aaa;font-size:14px}
 
-.scene-info{
-  margin-top:10px;
-  font-size:14px;
-  color:#aaa;
-}
+.sketchup-wrapper{margin-top:80px;border-top:1px solid #333;padding-top:40px}
+.sketchup-grid{display:flex;gap:40px;flex-wrap:wrap}
 
-.sketchup-wrapper{
-  margin-top:80px;
-  border-top:1px solid #333;
-  padding-top:40px;
-}
+.sketchup-item,.plugin-card{
+width:260px;aspect-ratio:4/5;overflow:hidden;position:relative}
 
-.sketchup-grid{
-  display:flex;
-  gap:50px;
-  flex-wrap:wrap;
-}
-
-.sketchup-item,
-.plugin-card{
-  width:260px;
-  aspect-ratio:4 / 5;
-  position:relative;
-  overflow:hidden;
-}
-
-.sketchup-item img,
-.plugin-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+.sketchup-item img,.plugin-card img{
+width:100%;height:100%;object-fit:cover}
 
 .plugin-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.2));
-  display:flex;
-  align-items:flex-end;
-  padding:18px;
-}
+position:absolute;inset:0;
+background:linear-gradient(to top,rgba(0,0,0,.75),rgba(0,0,0,.2));
+display:flex;align-items:flex-end;padding:18px}
 
-.plugin-title{
-  font-family:'Playfair Display', serif;
-  font-size:18px;
-  color:#fff;
-}
+.plugin-title{font-family:'Playfair Display',serif;color:#fff}
 
 @media(max-width:900px){
-  .scenes-grid{
-    grid-template-columns:1fr;
-  }
+.scenes-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -151,22 +55,16 @@ p{
 <body>
 <div class="container">
 
-<div class="top-link">
-  <a href="index.html">← Volver a la página principal</a>
-</div>
+<a href="index.html">← Volver a la página principal</a>
 
 <h1>Recursos</h1>
-
-<p>
-Herramientas, archivos base y material de apoyo que utilizo en procesos reales
-de diseño arquitectónico, representación y desarrollo de proyectos.
-</p>
+<p>Herramientas, archivos base y material de apoyo para procesos reales de diseño.</p>
 
 <h2>Escenas</h2>
 
 <div class="scenes-grid">
 
-<!-- ESCENAS GRATUITAS -->
+<!-- GRATUITAS -->
 <div>
 <h2>Escenas gratuitas</h2>
 
@@ -174,71 +72,53 @@ de diseño arquitectónico, representación y desarrollo de proyectos.
 
 <a class="scene-card" href="https://vt.tiktok.com/ZSabAcuVx/" target="_blank">
 <img src="proyectos/recurso-escenas/recurso.png" alt="Escena práctica">
-<div class="scene-overlay">
-<div class="scene-title">Escena práctica (TT)</div>
-</div>
+<div class="scene-overlay"><div class="scene-title">Escena práctica (TT)</div></div>
 </a>
 
 <a class="scene-card" href="https://www.patreon.com/posts/escenas-para-d5-148561691" target="_blank">
-<img src="proyectos/recurso-escenas/escenas-gratuitas/portada.png" alt="Escenas D5 gratuitas">
-<div class="scene-overlay">
-<div class="scene-title">Escenas D5 gratuitas</div>
-</div>
+<img src="proyectos/recurso-escenas/escenas-gratuitas/portada.png" alt="Escenas D5">
+<div class="scene-overlay"><div class="scene-title">Escenas D5 gratuitas</div></div>
 </a>
 
 </div>
-
-<div class="scene-info">Render base + escenas gratuitas · Acceso libre</div>
+<div class="scene-info">Acceso libre</div>
 </div>
 
-<!-- ESCENAS DE PAGO -->
+<!-- DE PAGO -->
 <div>
 <h2>Escenas de pago</h2>
 
 <div class="mosaic">
 
 <a class="scene-card" href="https://www.patreon.com/posts/escena-moderno-148255217" target="_blank">
-<img src="proyectos/REDISEÑO DE ESPACIOS INTERIORES/dormitorio-1.png" alt="Dormitorio moderno">
-<div class="scene-overlay">
-<div class="scene-title">Dormitorio moderno</div>
-</div>
+<img src="proyectos/REDISEÑO DE ESPACIOS INTERIORES/dormitorio-1.png">
+<div class="scene-overlay"><div class="scene-title">Dormitorio moderno</div></div>
 </a>
 
 <a class="scene-card" href="https://www.patreon.com/posts/sala-moderna-148259524" target="_blank">
-<img src="proyectos/REDISEÑO DE ESPACIOS INTERIORES/sala-moderna.png" alt="Sala moderna">
-<div class="scene-overlay">
-<div class="scene-title">Sala moderna</div>
-</div>
+<img src="proyectos/REDISEÑO DE ESPACIOS INTERIORES/sala-moderna.png">
+<div class="scene-overlay"><div class="scene-title">Sala moderna</div></div>
 </a>
 
 </div>
-
-<div class="scene-info">Render + escena completa · Acceso de pago</div>
+<div class="scene-info">Acceso de pago</div>
 </div>
 
 </div>
 
 <!-- SKETCHUP -->
 <div class="sketchup-wrapper">
-
 <h2>SketchUp</h2>
-<p>Atajos, guías visuales y recursos prácticos para modelar con mayor rapidez y control.</p>
+<p>Atajos, guías y recursos prácticos.</p>
 
 <div class="sketchup-grid">
 
-<a class="sketchup-item" href="https://vt.tiktok.com/ZSabAcuVx/" target="_blank">
-<img src="proyectos/recurso-escenas/sketchup/atajos-1.png" alt="Atajos SketchUp 1">
-</a>
-
-<a class="sketchup-item" href="https://vt.tiktok.com/ZSabAcuVx/" target="_blank">
-<img src="proyectos/recurso-escenas/sketchup/atajos-2.png" alt="Atajos SketchUp 2">
-</a>
+<img class="sketchup-item" src="proyectos/recurso-escenas/sketchup/atajos-1.png">
+<img class="sketchup-item" src="proyectos/recurso-escenas/sketchup/atajos-2.png">
 
 <a class="plugin-card" href="https://drive.google.com/drive/folders/1V4S_C8nAQc5II8XOt3BrdzW1KfZwWWZW" target="_blank">
-<img src="proyectos/recurso-escenas/sketchup/plugins/plugins.png" alt="Plugins SketchUp">
-<div class="plugin-overlay">
-<div class="plugin-title">5 Plugins gratuitos</div>
-</div>
+<img src="proyectos/recurso-escenas/sketchup/plugins/plugins.png">
+<div class="plugin-overlay"><div class="plugin-title">5 Plugins gratuitos</div></div>
 </a>
 
 </div>
@@ -247,5 +127,3 @@ de diseño arquitectónico, representación y desarrollo de proyectos.
 </div>
 </body>
 </html>
-
-
