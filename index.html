@@ -143,6 +143,65 @@ a{
   opacity:.8;
 }
 
+/* ===== CÍRCULO PERSONAJE ===== */
+
+.hero-avatar{
+  position:absolute;
+  top:160px;
+  right:120px;
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.hero-avatar::before{
+  content:"";
+  position:absolute;
+  inset:-8px;
+  border-radius:50%;
+  z-index:0;
+  animation:ledGlow 8s infinite alternate ease-in-out;
+}
+
+.hero-avatar img{
+  width:92%;
+  height:92%;
+  object-fit:contain;
+  border-radius:50%;
+  position:relative;
+  z-index:1;
+  background:#fff;
+}
+
+/* Animación LED dinámica */
+@keyframes ledGlow{
+  0%{
+    box-shadow:0 0 20px rgba(180,0,0,.6),
+               0 0 40px rgba(120,0,0,.5);
+    background:radial-gradient(circle, #7a0000, #2a0000);
+  }
+  33%{
+    box-shadow:0 0 25px rgba(120,0,60,.6),
+               0 0 50px rgba(80,0,40,.5);
+    background:radial-gradient(circle, #4b001f, #1a000a);
+  }
+  66%{
+    box-shadow:0 0 25px rgba(0,40,120,.6),
+               0 0 50px rgba(0,20,80,.5);
+    background:radial-gradient(circle, #001c4d, #000814);
+  }
+  100%{
+    box-shadow:0 0 20px rgba(150,0,0,.6),
+               0 0 40px rgba(90,0,0,.5);
+    background:radial-gradient(circle, #660000, #220000);
+  }
+}
+
+  
 @media(max-width:900px){
   .grid{
     grid-template-columns:1fr;
@@ -187,6 +246,11 @@ a{
     Aquí comparto proyectos, procesos, cursos y recursos pensados para crecer juntos.
   </p>
 </section>
+
+  <div class="hero-avatar">
+  <img src="aasz.png" alt="Alejandro Salazar 3D">
+</div>
+
 
 <section class="grid">
 
