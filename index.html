@@ -203,10 +203,29 @@ a{
 
   
 @media(max-width:900px){
+
   .grid{
     grid-template-columns:1fr;
     gap:60px;
   }
+
+  .hero-avatar{
+    position:relative;
+    top:0;
+    right:0;
+    margin:0 auto 40px auto;
+    width:200px;
+    height:200px;
+    order:-1;
+  }
+
+  .container{
+    display:flex;
+    flex-direction:column;
+  }
+
+}
+
 
   .recursos{
     grid-column:auto;
