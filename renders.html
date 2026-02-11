@@ -94,17 +94,19 @@ body{
 
   .gallery{
     grid-template-columns:1fr;
-    gap:20px; /* menos espacio */
+    gap:20px;
     margin:60px auto;
+  }
+
+  .tall,
+  .wide{
+    grid-row:auto !important;
+    grid-column:auto !important;
   }
 
   .item{
     border-radius:10px;
     overflow:hidden;
-  }
-
-  .item img{
-    height:auto;
   }
 
   .header{
@@ -117,6 +119,7 @@ body{
   }
 
 }
+
 
 /* ================= LIGHTBOX ================= */
 
@@ -253,5 +256,6 @@ lightbox.addEventListener('click',()=>{
 
 </body>
 </html>
+
 
 
