@@ -30,16 +30,6 @@ body{
   background:#ffffff;
 }
 
-/* DRAGÓN */
-.header img{
-  width:1300px;
-  max-width:96vw;
-  margin-top:0;
-  margin-bottom:112px;     /* ≈ 3 cm DE SEPARACIÓN */
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeUp 1.4s ease forwards;
-}
 
 /* TÍTULO */
 .header h1{
@@ -78,10 +68,6 @@ body{
 }
 
 /* ================= GALERÍA ================= */
-.renders-columns{
-  column-count:3;
-  column-gap:40px;
-}
 
 .render-item{
   break-inside:avoid;
@@ -165,9 +151,36 @@ body{
     line-height:1;
   }
 }
+/* ================= INFINITE CANVAS ================= */
 
-@media(max-width:600px){
-  .renders-columns{ column-count:1; }
+.canvas-viewport{
+  position:relative;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  background:#0b0b0b;
+  cursor:grab;
+}
+
+.canvas-world{
+  position:absolute;
+  width:3000px;
+  height:2000px;
+}
+
+.render-item{
+  position:absolute;
+  width:280px;
+  transition:transform .3s ease;
+}
+
+.render-item img{
+  width:100%;
+  border-radius:2px;
+}
+
+.render-item:hover{
+  transform:scale(1.08);
 }
 </style>
 </head>
@@ -187,79 +200,74 @@ body{
     <a href="index.html">← Volver a la página principal</a>
   </div>
 
- <section class="renders-columns">
+<div class="canvas-viewport">
+  <div class="canvas-world">
 
-  <div class="render-item">
-    <img src="proyectos/renders/01.jpg">
-  </div>
-  <div class="render-item">
-    <img src="proyectos/renders/02.jpg">
-  </div>
-  <div class="render-item">
-    <img src="proyectos/renders/03.jpg">
-  </div>
-  <div class="render-item">
-    <img src="proyectos/renders/04.jpg">
-  </div>
 
-  <div class="render-item">
-    <img src="proyectos/renders/BAÑO.png">
-  </div>
-  <div class="render-item">
-    <img src="proyectos/renders/DORMITORIO 1.png">
-  </div>
-  <div class="render-item">
-    <img src="proyectos/renders/DORMITORIO 2.png">
-  </div>
-
-  <div class="render-item">
-    <img src="proyectos/renders/R1 COLLAGE.jpg">
-  </div>
-  <div class="render-item">
-    <img src="proyectos/renders/R2 COLLAGE.jpg">
-  </div>
-  <div class="render-item">
-    <img src="proyectos/renders/R2.png">
-  </div>
-
-  <div class="render-item">
-    <img src="proyectos/renders/RENDER COLLAGE 4.jpg">
-  </div>
-  <div class="render-item">
-    <img src="proyectos/renders/render final11.png">
-  </div>
-
-  <div class="render-item">
-    <img src="proyectos/renders/RENDER INSPIRACIÓN.png">
-  </div>
-  <div class="render-item">
-    <img src="proyectos/renders/SALA MODERNA.png">
-  </div>
-  <div class="render-item">
-    <img src="proyectos/renders/SALA MODERNA 2.png">
-  </div>
-
-   <div class="render-item">
-  <img src="proyectos/renders/IMG_4199.png" alt="Render interior">
+  <div class="render-item" style="top:120px; left:200px;">
+  <img src="proyectos/renders/01.jpg">
 </div>
 
-<div class="render-item">
-  <img src="proyectos/renders/IMG_4200.png" alt="Render interior">
+<div class="render-item" style="top:300px; left:700px;">
+  <img src="proyectos/renders/02.jpg">
 </div>
 
-<div class="render-item">
-  <img src="proyectos/renders/vestidor01.png" alt="Render interior">
+<div class="render-item" style="top:600px; left:400px;">
+  <img src="proyectos/renders/03.jpg">
 </div>
 
-   <div class="render-item">
-  <img src="proyectos/renders/vestidor02.png" alt="Render interior">
+<div class="render-item" style="top:850px; left:1000px;">
+  <img src="proyectos/renders/04.jpg">
 </div>
 
-    <div class="render-item">
-  <img src="proyectos/renders/rendia.png" alt="Render interior">
+<div class="render-item" style="top:200px; left:1300px;">
+  <img src="proyectos/renders/BAÑO.png">
 </div>
+
+<div class="render-item" style="top:500px; left:1600px;">
+  <img src="proyectos/renders/DORMITORIO 1.png">
+</div>
+
+<div class="render-item" style="top:900px; left:1800px;">
+  <img src="proyectos/renders/DORMITORIO 2.png">
+</div>
+
+<div class="render-item" style="top:1200px; left:600px;">
+  <img src="proyectos/renders/R1 COLLAGE.jpg">
+</div>
+
+<div class="render-item" style="top:1500px; left:1200px;">
+  <img src="proyectos/renders/R2 COLLAGE.jpg">
+</div>
+
+<div class="render-item" style="top:1400px; left:1700px;">
+  <img src="proyectos/renders/R2.png">
+</div>
+
+<div class="render-item" style="top:1700px; left:300px;">
+  <img src="proyectos/renders/RENDER COLLAGE 4.jpg">
+</div>
+
+<div class="render-item" style="top:400px; left:2000px;">
+  <img src="proyectos/renders/render final11.png">
+</div>
+
+<div class="render-item" style="top:1000px; left:2200px;">
+  <img src="proyectos/renders/RENDER INSPIRACIÓN.png">
+</div>
+
+<div class="render-item" style="top:1600px; left:2100px;">
+  <img src="proyectos/renders/SALA MODERNA.png">
+</div>
+
+<div class="render-item" style="top:700px; left:2500px;">
+  <img src="proyectos/renders/SALA MODERNA 2.png">
+</div>
+
    
-</section>
+  </div>
+</div>
+
 
 
   <div class="signature">
@@ -307,6 +315,7 @@ document.querySelectorAll('.render-item').forEach(el=>observer.observe(el));
 
 </body>
 </html>
+
 
 
 
