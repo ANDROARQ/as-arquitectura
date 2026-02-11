@@ -100,6 +100,24 @@ body{
     font-size:72px;
   }
 }
+/* ================= LIGHTBOX ================= */
+
+.lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.92);
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+  cursor:pointer;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:90%;
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
 
 </style>
 </head>
@@ -159,10 +177,6 @@ body{
     <img src="proyectos/renders/RENDER COLLAGE 4.jpg">
   </div>
 
-  <div class="item tall">
-    <img src="proyectos/renders/render final11.png">
-  </div>
-
   <div class="item">
     <img src="proyectos/renders/RENDER INSPIRACIÓN.png">
   </div>
@@ -175,7 +189,50 @@ body{
     <img src="proyectos/renders/SALA MODERNA 2.png">
   </div>
 
+  <div class="item">
+  <img src="proyectos/renders/IMG_4199.png">
+</div>
+
+<div class="item">
+  <img src="proyectos/renders/IMG_4200.png">
+</div>
+
+<div class="item">
+  <img src="proyectos/renders/vestidor01.png">
+</div>
+
+<div class="item">
+  <img src="proyectos/renders/vestidor02.png">
+</div>
+
+<div class="item">
+  <img src="proyectos/renders/rendia.png">
+</div>
+
+
 </section>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img">
+</div>
+<script>
+const galleryItems = document.querySelectorAll('.item img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+galleryItems.forEach(img=>{
+  img.addEventListener('click',()=>{
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  });
+});
+
+lightbox.addEventListener('click',()=>{
+  lightbox.style.display = 'none';
+  lightboxImg.src = '';
+});
+</script>
 
 </body>
 </html>
+
