@@ -91,15 +91,33 @@ body{
 }
 
 @media(max-width:700px){
+
   .gallery{
     grid-template-columns:1fr;
-    gap:40px;
+    gap:20px; /* menos espacio */
+    margin:60px auto;
+  }
+
+  .item{
+    border-radius:10px;
+    overflow:hidden;
+  }
+
+  .item img{
+    height:auto;
+  }
+
+  .header{
+    padding:80px 20px 40px;
   }
 
   .header h1{
-    font-size:72px;
+    font-size:56px;
+    letter-spacing:2px;
   }
+
 }
+
 /* ================= LIGHTBOX ================= */
 
 .lightbox{
@@ -235,4 +253,5 @@ lightbox.addEventListener('click',()=>{
 
 </body>
 </html>
+
 
