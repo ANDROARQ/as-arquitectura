@@ -5,10 +5,10 @@
 <title>Renders | ANDRO ARQ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- FUENTES -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Playfair+Display+SC&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+
 *{ box-sizing:border-box; }
 
 body{
@@ -16,310 +16,166 @@ body{
   background:#ffffff;
   color:#111;
   font-family:'Inter', sans-serif;
-  user-select:none;
 }
 
-/* ================= PORTADA EDITORIAL ================= */
+/* ================= HEADER LIMPIO ================= */
+
 .header{
-  min-height:90vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-  padding:40px 40px 80px;   /* MENOS ESPACIO ARRIBA */
-  background:#ffffff;
-}
-
-
-/* TÍTULO */
-.header h1{
-  font-family:'Playfair Display SC', serif;
-  font-size:150px;
-  font-weight:400;
-  letter-spacing:6px;
-  color:#c75a56;
-  margin:0;
-  line-height:0.9;
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeUp 1.4s ease forwards;
-  animation-delay:.35s;
-}
-
-/* ================= CONTENEDOR GALERÍA ================= */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:120px 40px;
-  background:#0b0b0b;
-  color:#eee;
-}
-
-/* VOLVER */
-.top-link{
-  margin-bottom:80px;
-}
-
-.top-link a{
-  color:#aaa;
-  text-decoration:none;
-  font-size:14px;
-  border-bottom:1px solid #555;
-}
-
-/* ================= GALERÍA ================= */
-
-.render-item{
-  break-inside:avoid;
-  margin-bottom:40px;
-  cursor:pointer;
-  opacity:0;
-  transform:translateY(30px);
-}
-
-.render-item img{
-  width:100%;
-  display:block;
-  border-radius:2px;
-  pointer-events:none;
-}
-
-/* ================= FIRMA ================= */
-.signature{
-  margin-top:140px;
+  padding:120px 40px 60px;
   text-align:center;
 }
 
-.signature h2{
+.header h1{
   font-family:'Playfair Display', serif;
-  font-size:36px;
-  letter-spacing:2px;
+  font-size:120px;
+  letter-spacing:6px;
+  color:#c75a56;
   margin:0;
 }
 
-.signature p{
-  font-size:12px;
-  letter-spacing:2px;
+/* ================= GALERÍA CURADA ================= */
+
+.gallery{
+  max-width:1400px;
+  margin:120px auto;
+  padding:0 40px;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:60px;
+}
+
+.item{
+  overflow:hidden;
+}
+
+.item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .4s ease;
+}
+
+.item:hover img{
+  transform:scale(1.03);
+}
+
+/* Variaciones elegantes */
+.tall{
+  grid-row:span 2;
+}
+
+.wide{
+  grid-column:span 2;
+}
+
+/* ================= LINK SUPERIOR ================= */
+
+.top-link{
+  text-align:center;
+  margin-top:40px;
+}
+
+.top-link a{
   color:#777;
-  margin-top:10px;
-}
-
-/* ================= LIGHTBOX ================= */
-.lightbox{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.92);
-  align-items:center;
-  justify-content:center;
-  z-index:999;
-}
-
-.lightbox img{
-  max-width:90%;
-  max-height:90%;
-}
-
-/* ================= ANIMACIONES ================= */
-@keyframes fadeUp{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+  text-decoration:none;
+  border-bottom:1px solid #aaa;
+  font-size:14px;
 }
 
 /* ================= RESPONSIVE ================= */
+
 @media(max-width:1100px){
-  .header img{
-    width:1100px;
-    margin-bottom:90px;
-  }
-  .header h1{
-    font-size:110px;
-    letter-spacing:4px;
+  .gallery{
+    grid-template-columns:repeat(2, 1fr);
   }
 }
 
 @media(max-width:700px){
-  .header img{
-    width:900px;
-    margin-bottom:70px;
+  .gallery{
+    grid-template-columns:1fr;
+    gap:40px;
   }
+
   .header h1{
     font-size:72px;
-    letter-spacing:3px;
-    line-height:1;
   }
 }
-/* ================= INFINITE CANVAS ================= */
 
-.canvas-viewport{
-  position:relative;
-  width:100vw;
-  height:100vh;
-  overflow:hidden;
-  background:#0b0b0b;
-  cursor:grab;
-}
-
-.canvas-world{
-  position:absolute;
-  width:3000px;
-  height:2000px;
-}
-
-.render-item{
-  position:absolute;
-  width:280px;
-  transition:transform .3s ease;
-}
-
-.render-item img{
-  width:100%;
-  border-radius:2px;
-}
-
-.render-item:hover{
-  transform:scale(1.08);
-}
 </style>
 </head>
 
-<body oncontextmenu="return false">
+<body>
 
-<!-- PORTADA -->
 <section class="header">
-<img src="proyectos/renders/dragon-header.png" alt="Dragón oriental">
   <h1>RENDERS</h1>
-</section>
-
-<!-- GALERÍA -->
-<div class="container">
-
   <div class="top-link">
     <a href="index.html">← Volver a la página principal</a>
   </div>
+</section>
 
-<div class="canvas-viewport">
-  <div class="canvas-world">
+<section class="gallery">
 
-
-  <div class="render-item" style="top:120px; left:200px;">
-  <img src="proyectos/renders/01.jpg">
-</div>
-
-<div class="render-item" style="top:300px; left:700px;">
-  <img src="proyectos/renders/02.jpg">
-</div>
-
-<div class="render-item" style="top:600px; left:400px;">
-  <img src="proyectos/renders/03.jpg">
-</div>
-
-<div class="render-item" style="top:850px; left:1000px;">
-  <img src="proyectos/renders/04.jpg">
-</div>
-
-<div class="render-item" style="top:200px; left:1300px;">
-  <img src="proyectos/renders/BAÑO.png">
-</div>
-
-<div class="render-item" style="top:500px; left:1600px;">
-  <img src="proyectos/renders/DORMITORIO 1.png">
-</div>
-
-<div class="render-item" style="top:900px; left:1800px;">
-  <img src="proyectos/renders/DORMITORIO 2.png">
-</div>
-
-<div class="render-item" style="top:1200px; left:600px;">
-  <img src="proyectos/renders/R1 COLLAGE.jpg">
-</div>
-
-<div class="render-item" style="top:1500px; left:1200px;">
-  <img src="proyectos/renders/R2 COLLAGE.jpg">
-</div>
-
-<div class="render-item" style="top:1400px; left:1700px;">
-  <img src="proyectos/renders/R2.png">
-</div>
-
-<div class="render-item" style="top:1700px; left:300px;">
-  <img src="proyectos/renders/RENDER COLLAGE 4.jpg">
-</div>
-
-<div class="render-item" style="top:400px; left:2000px;">
-  <img src="proyectos/renders/render final11.png">
-</div>
-
-<div class="render-item" style="top:1000px; left:2200px;">
-  <img src="proyectos/renders/RENDER INSPIRACIÓN.png">
-</div>
-
-<div class="render-item" style="top:1600px; left:2100px;">
-  <img src="proyectos/renders/SALA MODERNA.png">
-</div>
-
-<div class="render-item" style="top:700px; left:2500px;">
-  <img src="proyectos/renders/SALA MODERNA 2.png">
-</div>
-
-   
-  </div>
-</div>
-
-
-
-  <div class="signature">
-    <h2>ANDRO ARQ</h2>
-    <p>ARCHITECTURE · VISUALIZATION</p>
+  <div class="item tall">
+    <img src="proyectos/renders/01.jpg">
   </div>
 
-</div>
+  <div class="item">
+    <img src="proyectos/renders/02.jpg">
+  </div>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <img id="lightbox-img">
-</div>
+  <div class="item">
+    <img src="proyectos/renders/03.jpg">
+  </div>
 
-<script>
-/* LIGHTBOX */
-const items = document.querySelectorAll('.render-item img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
+  <div class="item wide">
+    <img src="proyectos/renders/04.jpg">
+  </div>
 
-items.forEach(img=>{
-  img.parentElement.addEventListener('click',()=>{
-    lightboxImg.src = img.src;
-    lightbox.style.display = 'flex';
-  });
-});
+  <div class="item">
+    <img src="proyectos/renders/BAÑO.png">
+  </div>
 
-lightbox.addEventListener('click',()=>{
-  lightbox.style.display = 'none';
-  lightboxImg.src = '';
-});
+  <div class="item tall">
+    <img src="proyectos/renders/DORMITORIO 1.png">
+  </div>
 
-/* REVEAL SCROLL */
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.style.animation = 'fadeUp 1s ease forwards';
-      observer.unobserve(entry.target);
-    }
-  });
-},{ threshold:0.15 });
+  <div class="item">
+    <img src="proyectos/renders/DORMITORIO 2.png">
+  </div>
 
-document.querySelectorAll('.render-item').forEach(el=>observer.observe(el));
-</script>
+  <div class="item">
+    <img src="proyectos/renders/R1 COLLAGE.jpg">
+  </div>
+
+  <div class="item wide">
+    <img src="proyectos/renders/R2 COLLAGE.jpg">
+  </div>
+
+  <div class="item">
+    <img src="proyectos/renders/R2.png">
+  </div>
+
+  <div class="item">
+    <img src="proyectos/renders/RENDER COLLAGE 4.jpg">
+  </div>
+
+  <div class="item tall">
+    <img src="proyectos/renders/render final11.png">
+  </div>
+
+  <div class="item">
+    <img src="proyectos/renders/RENDER INSPIRACIÓN.png">
+  </div>
+
+  <div class="item">
+    <img src="proyectos/renders/SALA MODERNA.png">
+  </div>
+
+  <div class="item wide">
+    <img src="proyectos/renders/SALA MODERNA 2.png">
+  </div>
+
+</section>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
