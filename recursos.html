@@ -5,9 +5,10 @@
 <title>Recursos | ANDRO ARQ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&family=Allura&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+
 body{
   margin:0;
   background:#ffffff;
@@ -37,12 +38,6 @@ body{
   border-color:#000;
 }
 
-
-.top-link a:hover{
-  color:#fff;
-  border-color:#fff;
-}
-
 h1,h2{
   font-family:'Playfair Display', serif;
   color:#111;
@@ -55,7 +50,7 @@ h1{
 
 h2{
   font-size:28px;
-  margin:40px 0 20px;
+  margin:80px 0 20px;
 }
 
 p{
@@ -65,123 +60,41 @@ p{
   margin-bottom:30px;
 }
 
-
-/* GRID */
-.scenes-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-}
-
-/* MOSAICO */
-.mosaic{
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:20px;
-}
-
-/* CARD */
-.scene-card{
-  position:relative;
-  aspect-ratio:4 / 3;
-  overflow:hidden;
-  border-radius:12px;
-}
-
-.scene-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.scene-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.2));
-  display:flex;
-  align-items:flex-end;
-  padding:18px;
-}
-
-.scene-title{
-  font-family:'Allura', cursive;
-  font-size:34px;
-  color:#fff;
-}
-
-.scene-info{
-  margin-top:10px;
-  font-size:14px;
-  color:#aaa;
-}
-
-/* SKETCHUP */
-.sketchup-wrapper{
-  margin-top:80px;
-  border-top:1px solid #333;
-  padding-top:40px;
-}
-
-.sketchup-grid{
-  display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  gap:24px;
-}
-
-.sketchup-item{
-  aspect-ratio:1 / 1;
-  max-width:180px;
-  margin:auto;
-  overflow:hidden;
-}
-
-
-.sketchup-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-@media(max-width:900px){
-  .scenes-grid{
-    grid-template-columns:1fr;
-  }
-  .sketchup-grid{
-    grid-template-columns:1fr;
-  }
-}
-  .resource-section{
-  margin-top:120px;
-}
-
+/* GRID UNIFICADO */
 .cards-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
   gap:50px;
-  margin-top:40px;
 }
 
+/* CARD UNIFICADA */
 .resource-card{
-  background:#0a0a0a;
-  border:1px solid #222;
-  border-radius:14px;
+  border:1px solid #e5e5e5;
+  border-radius:16px;
   overflow:hidden;
-  transition:transform .3s ease, border .3s ease;
+  background:#fff;
+  transition:transform .3s ease;
+  aspect-ratio:4 / 3;
+  display:flex;
+  flex-direction:column;
 }
 
 .resource-card:hover{
   transform:translateY(-6px);
-  border:1px solid #333;
 }
 
 .resource-card img{
   width:100%;
-  height:220px;
+  height:60%;
   object-fit:cover;
 }
 
 .card-content{
   padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  flex:1;
 }
 
 .card-content h3{
@@ -215,24 +128,10 @@ p{
   border:1px solid #333;
 }
 
-
-  /* Igualar tamaño de OFERTAS a escenas */
-.resource-card{
-  aspect-ratio:4 / 3;
-  overflow:hidden;
-  border-radius:16px;
-}
-
-.resource-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.resource-section .cards-grid{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:40px;
+@media(max-width:900px){
+  .cards-grid{
+    grid-template-columns:1fr;
+  }
 }
 
 </style>
@@ -251,217 +150,121 @@ p{
 <p>
 Herramientas, archivos base y material de apoyo para procesos reales de diseño.
 </p>
+
 <!-- ================= OFERTAS ================= -->
 
-<div class="resource-section">
-  <h2>Ofertas</h2>
+<h2>Ofertas</h2>
 
-  <div class="cards-grid">
+<div class="cards-grid">
 
-    <div class="resource-card">
-      <img src="proyectos/recurso-escenas/pack01.png" alt="ARQ PRO PACK">
-
-      <div class="card-content">
-        <h3>ARQ PRO PACK</h3>
-
-        <div class="card-buttons">
-          <a href="https://androarq.gumroad.com/l/propack01"
-             target="_blank"
-             class="btn-pink">
-             Gumroad
-          </a>
-        </div>
-
+  <div class="resource-card">
+    <img src="proyectos/recurso-escenas/pack01.png">
+    <div class="card-content">
+      <h3>ARQ PRO PACK</h3>
+      <div class="card-buttons">
+        <a href="https://androarq.gumroad.com/l/propack01"
+           target="_blank" class="btn-pink">Gumroad</a>
       </div>
     </div>
-
   </div>
+
 </div>
 
 <!-- ================= ESCENAS GRATUITAS ================= -->
 
-<div class="resource-section">
-  <h2>Escenas gratuitas</h2>
+<h2>Escenas gratuitas</h2>
 
-  <div class="cards-grid">
+<div class="cards-grid">
 
-    <div class="resource-card">
-      <img src="proyectos/recurso-escenas/recurso.png">
-      <div class="card-content">
-        <h3>Escena práctica (TT)</h3>
-        <div class="card-buttons">
-          <a href="https://www.patreon.com/posts/escena-practica-148404847"
-             target="_blank" class="btn-dark">Patreon</a>
-        </div>
+  <div class="resource-card">
+    <img src="proyectos/recurso-escenas/recurso.png">
+    <div class="card-content">
+      <h3>Escena práctica (TT)</h3>
+      <div class="card-buttons">
+        <a href="https://www.patreon.com/posts/escena-practica-148404847"
+           target="_blank" class="btn-dark">Patreon</a>
       </div>
     </div>
-
-    <div class="resource-card">
-      <img src="proyectos/recurso-escenas/escenas-gratuitas/portada.png">
-      <div class="card-content">
-        <h3>Escenas D5 gratuitas</h3>
-        <div class="card-buttons">
-          <a href="https://www.patreon.com/posts/escenas-para-d5-148561691"
-             target="_blank" class="btn-dark">Patreon</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="resource-card">
-      <img src="proyectos/recurso-escenas/escena-d5.png">
-      <div class="card-content">
-        <h3>Escena D5</h3>
-        <div class="card-buttons">
-          <a href="https://www.patreon.com/posts/escena-d5-03-150143525"
-             target="_blank" class="btn-dark">Patreon</a>
-        </div>
-      </div>
-    </div>
-
   </div>
+
+  <div class="resource-card">
+    <img src="proyectos/recurso-escenas/escenas-gratuitas/portada.png">
+    <div class="card-content">
+      <h3>Escenas D5 gratuitas</h3>
+      <div class="card-buttons">
+        <a href="https://www.patreon.com/posts/escenas-para-d5-148561691"
+           target="_blank" class="btn-dark">Patreon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="resource-card">
+    <img src="proyectos/recurso-escenas/escena-d5.png">
+    <div class="card-content">
+      <h3>Escena D5</h3>
+      <div class="card-buttons">
+        <a href="https://www.patreon.com/posts/escena-d5-03-150143525"
+           target="_blank" class="btn-dark">Patreon</a>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ================= ESCENAS DE PAGO ================= -->
 
-<div class="resource-section">
-  <h2>Escenas de pago</h2>
+<h2>Escenas de pago</h2>
 
-  <div class="cards-grid">
+<div class="cards-grid">
 
-    <div class="resource-card">
-      <img src="proyectos/rediseno-espacios-interiores/dormitorio-1.png">
-      <div class="card-content">
-        <h3>Dormitorio moderno</h3>
-        <div class="card-buttons">
-          <a href="https://androarq.gumroad.com/l/dormitorio-moderno-01"
-             target="_blank" class="btn-pink">Gumroad</a>
-          <a href="https://www.patreon.com/posts/escena-moderno-148255217"
-             target="_blank" class="btn-dark">Patreon</a>
-        </div>
+  <div class="resource-card">
+    <img src="proyectos/rediseno-espacios-interiores/dormitorio-1.png">
+    <div class="card-content">
+      <h3>Dormitorio moderno</h3>
+      <div class="card-buttons">
+        <a href="https://androarq.gumroad.com/l/dormitorio-moderno-01"
+           target="_blank" class="btn-pink">Gumroad</a>
+        <a href="https://www.patreon.com/posts/escena-moderno-148255217"
+           target="_blank" class="btn-dark">Patreon</a>
       </div>
     </div>
-
-    <div class="resource-card">
-      <img src="proyectos/rediseno-espacios-interiores/sala-moderna.png">
-      <div class="card-content">
-        <h3>Sala moderna</h3>
-        <div class="card-buttons">
-          <a href="https://androarq.gumroad.com/l/escena-salamoderna"
-             target="_blank" class="btn-pink">Gumroad</a>
-          <a href="https://www.patreon.com/posts/sala-moderna-148259524"
-             target="_blank" class="btn-dark">Patreon</a>
-        </div>
-      </div>
-    </div>
-
   </div>
-</div>
 
-<!-- ================= SKETCHUP ================= -->
-<div class="sketchup-wrapper">
-
-  <h2>SketchUp</h2>
-  <p>Atajos, guías y recursos prácticos.</p>
-
-<div class="mosaic" style="grid-template-columns:repeat(2, 1fr);">
-
-    <a class="scene-card"
-       href="https://vt.tiktok.com/ZSabAcuVx/"
-       target="_blank">
-      <img src="proyectos/recurso-escenas/sketchup/atajos-1.png"
-           alt="Atajos SketchUp 1">
-    </a>
-
-    <div class="scene-card">
-      <img src="proyectos/recurso-escenas/sketchup/atajos-2.png"
-           alt="Atajos SketchUp 2">
-    </div>
-
-   <div class="scene-card">
-
-  <img src="proyectos/recurso-escenas/escenas-gratuitas/pack 02.png" alt="Pack Plugins 01">
-
-  <div class="scene-overlay">
-    <div>
-      <div class="scene-title">Pack Plugins 01</div>
-
-      <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
-
-        <!-- GUMROAD -->
-        <a href="https://androarq.gumroad.com/l/sketchup-pg02"
-           target="_blank"
-           style="
-           background:#ff90e8;
-           color:#000;
-           padding:6px 14px;
-           font-size:13px;
-           text-decoration:none;
-           border-radius:20px;
-           font-weight:500;">
-          Gumroad
-        </a>
-
-        <!-- PATREON -->
-        <a href="https://www.patreon.com/posts/plugins-pack-01-150064400"
-           target="_blank"
-           style="
-           background:#111;
-           color:#fff;
-           padding:6px 14px;
-           font-size:13px;
-           text-decoration:none;
-           border-radius:20px;
-           border:1px solid #444;">
-          Patreon
-        </a>
-
+  <div class="resource-card">
+    <img src="proyectos/rediseno-espacios-interiores/sala-moderna.png">
+    <div class="card-content">
+      <h3>Sala moderna</h3>
+      <div class="card-buttons">
+        <a href="https://androarq.gumroad.com/l/escena-salamoderna"
+           target="_blank" class="btn-pink">Gumroad</a>
+        <a href="https://www.patreon.com/posts/sala-moderna-148259524"
+           target="_blank" class="btn-dark">Patreon</a>
       </div>
     </div>
   </div>
 
 </div>
 
-    <a class="scene-card"
-       href="https://www.patreon.com/posts/sketchup-2026-150058561"
-       target="_blank">
-      <img src="proyectos/recurso-escenas/escenas-gratuitas/sketchup.png"
-           alt="Sketchup 2026">
-      <div class="scene-overlay">
-        <div class="scene-title">Sketchup 2026</div>
-      </div>
-    </a>
-
-  </div>
-
-</div>
-
-
-  
 <!-- ================= VARIOS ================= -->
 
-<div class="resource-section">
-  <h2>Varios</h2>
+<h2>Varios</h2>
 
-  <div class="cards-grid">
+<div class="cards-grid">
 
-    <div class="resource-card">
-      <img src="proyectos/recurso-escenas/photoshop01.jpeg">
-      <div class="card-content">
-        <h3>Arch Brushes 01</h3>
-        <div class="card-buttons">
-          <a href="https://androarq.gumroad.com/l/kbuna"
-             target="_blank" class="btn-pink">Gumroad</a>
-        </div>
+  <div class="resource-card">
+    <img src="proyectos/recurso-escenas/photoshop01.jpeg">
+    <div class="card-content">
+      <h3>Arch Brushes 01</h3>
+      <div class="card-buttons">
+        <a href="https://androarq.gumroad.com/l/kbuna"
+           target="_blank" class="btn-pink">Gumroad</a>
       </div>
     </div>
-
   </div>
+
 </div>
 
+</div>
 
 </body>
 </html>
-
-
-
-
